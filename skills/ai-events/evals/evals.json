@@ -1,0 +1,44 @@
+{
+  "skill_name": "ai-events",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Paruošk svarbiausių šio mėnesio AI naujienų apžvalgą. Kiekvienai naujienai surask oficialų pranešimą ir nepriklausomų žmonių, kurie patys išbandė funkciją, atsiliepimus – kas veikia, kokios klaidos ar ribojimai pastebėti.",
+      "expected_output": "Lithuanian roundup covering the current calendar month to date, with official source and date paired with independent hands-on reviews, positive findings, failures or limitations, evidence status, direct links, and clear separation of fact from interpretation.",
+      "files": [],
+      "expectations": [
+        "The response explicitly states the current month, year, and date range covered.",
+        "Each listed development has a direct official source and a publication date.",
+        "Independent testing or commentary is linked separately from the official announcement.",
+        "Claims based on one person's experience are identified as anecdotal rather than representative.",
+        "Missing independent validation and conflicting evidence are clearly disclosed.",
+        "The response does not invent prices, availability, benchmarks, tests, or findings."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "What changed in AI coding agents this month? I want official release notes plus developer reports from people who tried the new features, especially regressions, bugs, and examples where they worked well.",
+      "expected_output": "A current-month-focused English-language briefing on AI coding agents, connecting official release notes with dated developer tests, bug reports, and positive practical examples.",
+      "files": [],
+      "expectations": [
+        "Results are limited to this calendar month, except for older releases with a clearly dated current-month follow-up.",
+        "Official release notes or documentation are preferred for feature facts.",
+        "Developer reports include direct links and describe what was actually tested where possible.",
+        "Bugs and positive results are both reported when evidence exists, without forcing balance.",
+        "Product versions are checked so feedback is not incorrectly attributed to another release."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Find this month's biggest AI model releases and check whether independent benchmarks or reviewers confirm the companies' performance claims. Tell me where the evidence is weak or contradictory.",
+      "expected_output": "A concise, source-backed comparison of current-month AI model releases, official performance claims, independent evaluations, methodology caveats, and contradictory or insufficient evidence.",
+      "files": [],
+      "expectations": [
+        "Official performance claims are attributed to their publishers rather than presented as independent fact.",
+        "Independent benchmark methodology and comparability limitations are described when available.",
+        "Conflicting findings are explicitly identified and sourced.",
+        "The answer does not infer that a model is generally available from a research announcement or limited rollout."
+      ]
+    }
+  ]
+}
