@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Events"
+  short_description: "Summarize this month's AI news and independent tests"
+  default_prompt: "Summarize important AI announcements from the current month, then compare official claims with independent hands-on reviews, tests, bugs, and positive or negative user experiences. Link and date each source."
