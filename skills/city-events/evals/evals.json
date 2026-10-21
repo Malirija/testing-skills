@@ -1,0 +1,41 @@
+{
+  "skill_name": "city-events",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Find concerts, exhibitions, festivals, and other interesting events in Vilnius for November 7–8, 2026. Include times, venues, prices if available, and direct links.",
+      "expected_output": "A Lithuanian-language shortlist of verified events in Vilnius that take place on November 7 or 8, 2026, with source links and clear notes for unavailable times or prices.",
+      "files": [],
+      "expectations": [
+        "Every listed event has a credible source link.",
+        "Every listed event is scheduled for November 7 or November 8, 2026, in Vilnius or its clearly identified immediate area.",
+        "The answer includes a varied mix of event types when verified options exist.",
+        "Unknown times and prices are marked as unavailable rather than guessed."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "What can I do in Kaunas on December 5, 2026? I prefer art, live music, or something unusual, and I would like to keep the ticket under €20 if possible.",
+      "expected_output": "A shortlist focused on art, live music, and distinctive events in Kaunas on December 5, 2026, highlighting verified prices under €20 and clearly marking events whose prices are unavailable or over budget.",
+      "files": [],
+      "expectations": [
+        "The results are limited to December 5, 2026, in Kaunas or clearly identified nearby locations.",
+        "Art and live music are prioritized, with unusual events included where credible sources exist.",
+        "Price information is sourced and the €20 preference is clearly handled.",
+        "The answer does not claim a ticket is available without supporting evidence."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Find family-friendly events in Riga for the weekend of January 16–17, 2027. Please include indoor options in case the weather is bad.",
+      "expected_output": "A family-focused list of verified Riga events for January 16–17, 2027, with indoor options clearly identified and direct event links.",
+      "files": [],
+      "expectations": [
+        "All listed events fall on January 16 or 17, 2027, in Riga or a clearly identified nearby area.",
+        "The results prioritize family-friendly activities and explicitly identify indoor options where the source supports it.",
+        "Each event has a direct, credible source link.",
+        "The answer avoids inventing age recommendations, schedules, or prices."
+      ]
+    }
+  ]
+}
