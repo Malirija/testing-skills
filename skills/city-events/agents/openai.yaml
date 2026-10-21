@@ -1,0 +1,4 @@
+interface:
+  display_name: "City Events"
+  short_description: "Find verified events in a city for chosen dates"
+  default_prompt: "Find concerts, exhibitions, festivals, and other events in a city for my dates. Verify event dates and provide direct links, venues, times, and prices when available."
