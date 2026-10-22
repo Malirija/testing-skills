@@ -1,49 +1,49 @@
 ---
 name: city-events
-description: Find concerts, exhibitions, festivals, theatre, family activities, markets, and other public events in a specified city for specified dates. Use whenever the user asks what is happening in a city, what to do on a certain date or weekend, or asks to discover local events—even if they do not say “events” explicitly.
+description: Find and verify public events happening in Vilnius during the current calendar week, including concerts, exhibitions, festivals, theatre, family activities, and markets. Use whenever the user asks what is happening in Vilnius this week or what to do in Vilnius, even if they do not explicitly say “events”.
 ---
 
-# City Events
+# Vilnius City Events This Week
 
-Find useful, date-specific public events in the city the user requests. Prioritize accuracy, relevant variety, and direct links over a long list.
+Find a useful, varied shortlist of public events taking place in Vilnius during the current calendar week. Verify dates and details with direct sources, and make the date range explicit.
 
 ## Workflow
 
-1. **Confirm the search scope.**
-   - Identify the city and date or date range from the request.
-   - If either the city or dates are missing and cannot be reasonably inferred from the current conversation, ask one concise clarifying question before searching.
-   - Interpret relative dates using the current date, and use the city's local time zone. State the interpreted dates explicitly.
-   - If the user gives interests, budget, language, age group, accessibility needs, or preferred event types, apply them as filters. Otherwise, search across a varied mix of event types.
+1. **Set the week.**
+   - The city is always Vilnius, Lithuania. Do not ask the user which city and do not include events in other cities.
+   - Default to the current calendar week, Monday through Sunday, using Vilnius local time (Europe/Vilnius). Resolve the current date at the time of the request; do not assume the week from a stale example or file timestamp.
+   - State the exact start and end dates, including the year. If the user explicitly gives another date range, follow it while keeping the search limited to Vilnius.
+   - Apply any stated preferences such as event type, budget, language, age group, or accessibility.
 
-2. **Search the web.**
-   - Search for events in the requested city and exact date range.
-   - Prefer primary sources: official venue calendars, organizer pages, museums, festival websites, city cultural calendars, and official ticketing pages.
-   - Use reputable event listings to discover candidates, then verify each event and date against a primary source when possible.
-   - Search more than one source and vary the queries by category (for example, concerts, exhibitions, festivals, theatre, and family events) so the results are not limited to one listing site.
-   - Open the event page and confirm the event is scheduled for the requested date. For multi-day events, make sure the requested date falls within the event dates.
-   - Include an event only when there is a credible source for its name, date, and location. Never invent events, dates, venues, ticket availability, or prices.
+2. **Search for Vilnius events.**
+   - Search the web for Vilnius and the exact date range. Search multiple categories, such as concerts, exhibitions, festivals, theatre, family activities, talks, and markets, to find a varied set.
+   - Prefer primary sources: official venue calendars, organizer pages, museums, festival sites, city cultural calendars, and official ticket pages. Use reputable listings to discover events, then verify candidates on primary sources when possible.
+   - Open each event's source and confirm its date falls within the stated week and its location is in Vilnius. Do not include events in other cities or nearby towns.
+   - Include an event only when a credible source supports its name, date, and Vilnius location. Never invent events, dates, times, venues, ticket availability, or prices.
 
-3. **Select and organize results.**
-   - Return a useful, varied shortlist, normally 5–10 events when enough verified options exist. Return fewer rather than pad the list with weak or unverified results.
-   - Avoid duplicates and distinguish separate sessions of the same event when dates or times differ.
-   - Prefer specific, actionable information: event name, date and local start time if published, venue or area, brief description, price or ticket information if verified, and a direct source link.
-   - If a price or time is not published, say “not listed” rather than guessing. Do not imply tickets are available unless the source confirms it.
-   - If only a secondary listing can be found, label it accordingly. If no credible events can be verified for a date, say so and suggest broadening the date range or nearby area.
+3. **Choose and verify results.**
+   - Return a varied shortlist, normally 5–10 events when enough verified options exist. Return fewer rather than pad the list with weak or unverified results.
+   - Remove duplicates. Distinguish separate sessions when their dates or times differ.
+   - Include the event name, date and local start time when published, venue, a short description, and verified price or ticket information when available.
+   - If a time or price is not published, say “nenurodyta”. Do not imply tickets are available unless the source confirms it.
+   - If only a secondary listing supports an event, identify it as a secondary source. If no credible events can be verified, say so; do not fill the list with events from outside Vilnius.
 
-4. **Present the answer in the user's language.**
-   - Start with the city and exact dates searched.
-   - Use a compact table with columns: Event, Date and time, Venue, Price/tickets, Details/source.
-   - Link event names or source text directly to the most relevant event page, not just a generic homepage.
-   - After the table, highlight 2–3 picks for different interests or budgets only when the evidence supports those recommendations.
-   - Briefly note any limits, such as unavailable prices, incomplete listings, or dates that could not be independently confirmed.
+4. **Present the findings.**
+   - Answer in the user's language.
+   - Start with Vilnius and the exact Monday–Sunday date range searched (or the explicitly requested range).
+   - Use a compact table with columns: Renginys, Data ir laikas, Vieta, Kaina / bilietai, Informacija / šaltinis.
+   - Link each event directly to its most relevant event or ticket page, not only to a generic homepage.
+   - After the table, highlight 2–3 picks for different interests or budgets only when supported by the evidence.
+   - Briefly state material limitations, such as unlisted prices or dates that could not be independently confirmed.
 
 ## Quality checks
 
 Before responding, verify that:
-- Every listed event falls within the requested dates and city/area.
+
+- Every event is in Vilnius and within the stated date range.
 - Every event has a source link that supports the details shown.
-- Date, time, venue, and price claims are not inferred from unrelated pages.
-- Results are not all from a single category when varied options are available.
-- Uncertainty and missing information are clearly marked.
+- Times, venues, prices, and ticket availability are not inferred from unrelated pages.
+- The list includes different event types when verified Vilnius options exist.
+- Unknown or uncertain details are clearly marked.
 
 Do not book tickets, register the user, or make purchases unless the user explicitly asks and the available tools support that action.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vilnius Community Events"
+  short_description: "Find additional free community events in Vilnius"
+  default_prompt: "Find additional free community-oriented events in Vilnius this week, especially from neighborhood, library, community-center, volunteer, and other local sources. Verify dates, locations, free entry, and registration details, and exclude events already listed by city-events."

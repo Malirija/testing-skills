@@ -1,0 +1,4 @@
+interface:
+  display_name: "Run Vilnius Events"
+  short_description: "Run all event skills and return the weekly digest"
+  default_prompt: "Run city-events, then community-events for the same Vilnius week, and combine both results with weekly-digest. Return only the final concise weekly report."

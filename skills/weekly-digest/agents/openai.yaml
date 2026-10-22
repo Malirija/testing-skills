@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vilnius Weekly Digest"
+  short_description: "Combine Vilnius events into one weekly report"
+  default_prompt: "Combine the verified city-events and community-events results for Vilnius into one concise weekly digest. Deduplicate events, sort them by date, label free community events clearly, and include direct links, costs, and useful picks."
